@@ -79,7 +79,7 @@ export default function Services() {
                 <div className="tilt-in">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`https://picsum.photos/seed/${s.seed}/900/700.jpg`}
+                    src={s.src}
                     alt={s.alt}
                     loading="lazy"
                     decoding="async"

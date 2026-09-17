@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <div className="f-col">
             <span className="fl">Reach us</span>
-            <a className="f-link" href="mailto:hello@finaki.studio">hello@finaki.studio</a>
+            <a className="f-link" href="mailto:hello@finaki.co.ke">hello@finaki.co.ke</a>
             <a className="f-link" href="tel:+254700123456">+254 700 123 456</a>
             <a className="f-link" href="https://wa.me/254700123456" target="_blank" rel="noopener">WhatsApp</a>
           </div>

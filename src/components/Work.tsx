@@ -95,7 +95,7 @@ export default function Work() {
                   <div className="tilt-in">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`https://picsum.photos/seed/${proj.seed}/1000/800.jpg`}
+                      src={proj.src}
                       alt={`${proj.title} — ${proj.cat}`}
                       loading="lazy"
                       decoding="async"
@@ -161,7 +161,7 @@ export default function Work() {
           <div className="wm-img">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`https://picsum.photos/seed/${p?.seed || "default"}/1600/760.jpg`}
+              src={p?.src || ""}
               alt={p?.title || ""}
             />
           </div>

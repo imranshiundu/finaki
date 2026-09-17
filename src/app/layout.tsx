@@ -103,7 +103,7 @@ export default function RootLayout({
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  email: "hello@finaki.studio",
+                  email: "hello@finaki.co.ke",
                   telephone: "+254700123456",
                   contactType: "customer service",
                 },
@@ -128,7 +128,7 @@ export default function RootLayout({
                 image: "https://finaki.co.ke/favicon.svg",
                 url: "https://finaki.co.ke",
                 telephone: "+254700123456",
-                email: "hello@finaki.studio",
+                email: "hello@finaki.co.ke",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Nairobi",

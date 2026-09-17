@@ -126,7 +126,7 @@ export default function Nav() {
           </a>
         </nav>
         <div className="mmenu-foot mono">
-          <span>hello@finaki.studio</span>
+          <span>hello@finaki.co.ke</span>
           <span>Nairobi, Kenya — {time} EAT</span>
         </div>
       </div>

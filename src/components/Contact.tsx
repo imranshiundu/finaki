@@ -38,7 +38,7 @@ export default function Contact() {
     );
     showToast("Message ready — opening your mail app.");
     setTimeout(() => {
-      window.location.href = `mailto:hello@finaki.studio?subject=${encodeURIComponent("New project inquiry — " + name.value.trim())}&body=${body}`;
+      window.location.href = `mailto:hello@finaki.co.ke?subject=${encodeURIComponent("New project inquiry — " + name.value.trim())}&body=${body}`;
     }, 600);
     form.reset();
     setErrors({});
@@ -73,8 +73,8 @@ export default function Contact() {
               Tell us what you&apos;re building — or what&apos;s blocking it.
               We reply with thoughts, not a sales deck.
             </p>
-            <a className="big-mail" href="mailto:hello@finaki.studio">
-              hello@finaki.studio{" "}
+            <a className="big-mail" href="mailto:hello@finaki.co.ke">
+              hello@finaki.co.ke{" "}
               <svg className="ic">
                 <use href="#i-arrow" />
               </svg>
