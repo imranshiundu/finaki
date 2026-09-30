@@ -6,11 +6,19 @@
   <title>FINAKI® — Design Studio, Nairobi</title>
   <meta name="description" content="FINAKI is an independent design studio building change-making websites and brand experiences for founder-led brands. Nairobi / Melbourne — working worldwide." />
   <meta name="theme-color" content="#0d0c0a" />
+  <link rel="canonical" href="https://finaki.co.ke/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FINAKI" />
+  <meta property="og:title" content="FINAKI® — Design Studio, Nairobi" />
+  <meta property="og:description" content="FINAKI is an independent design studio building change-making websites and brand experiences for founder-led brands. Nairobi / Melbourne — working worldwide." />
+  <meta property="og:url" content="https://finaki.co.ke/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0c0a'/%3E%3Cpath d='M16 5v22M6.5 10.5l19 11M25.5 10.5l-19 11' stroke='%23ff4b1f' stroke-width='3'/%3E%3C/svg%3E" type="image/svg+xml" />
 
   <!-- Type system: Clash Display (identity) + General Sans (body) + JetBrains Mono (labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
@@ -218,8 +226,12 @@
   .h-lines.muted .lm:nth-child(3) .lm-in{transition-delay:1.01s}
   body.is-loaded .hero .lm-in{transform:translateY(0)}
 
-  .hero-foot{margin-top:auto;padding:7vh 0 4vh;display:flex;justify-content:space-between;color:var(--mut);opacity:0;transition:opacity .8s ease 1.2s}
+  .hero-foot{margin-top:auto;padding:7vh 0 4vh;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--mut);opacity:0;transition:opacity .8s ease 1.2s}
   body.is-loaded .hero-foot{opacity:1}
+  [data-scroll-down]{cursor:pointer;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .3s,border-color .3s}
+  [data-scroll-down]:hover{color:var(--paper);border-color:var(--accent)}
+  [data-scroll-down] span{display:inline-block;animation:cueDrop 2.2s var(--ease-o) infinite}
+  @keyframes cueDrop{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(5px);opacity:.55}}
   .hero-word-mask{overflow:hidden;margin:0 calc(var(--pad)*-.6) -1.5vw}
   .hero-word{
     display:flex;justify-content:space-between;width:100%;will-change:transform;
@@ -1044,21 +1056,34 @@
 
     /* ---------- Smooth scroll (Lenis, graceful fallback) ---------- */
     let lenis = null;
-    if (window.Lenis && !RM) {
-      lenis = new Lenis({
-        duration: 1.4,
-        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        touchMultiplier: 1.6
-      });
-      const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
-      requestAnimationFrame(raf);
-    }
+    try {
+      if (window.Lenis && !RM) {
+        lenis = new Lenis({
+          duration: 1.4,
+          easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+          touchMultiplier: 1.6
+        });
+        const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+        requestAnimationFrame(raf);
+      }
+    } catch (err) { lenis = null; }
     function smoothTo(target) {
-      if (lenis) lenis.scrollTo(target, { duration: 1.6, offset: 0 });
-      else if (typeof target === 'number') window.scrollTo({ top: target, behavior: 'smooth' });
+      if (RM) {
+        if (typeof target === 'number') window.scrollTo({ top: target });
+        else target.scrollIntoView({ block: 'start' });
+        return;
+      }
+      if (lenis) {
+        try { lenis.scrollTo(target, { duration: 1.6, offset: 0 }); return; }
+        catch (err) { /* fall through to native */ }
+      }
+      if (typeof target === 'number') window.scrollTo({ top: target, behavior: 'smooth' });
       else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    /* ---------- Image decoding (smoother raster, less jank) ---------- */
+    $$('img').forEach(im => { if (!im.getAttribute('decoding')) im.setAttribute('decoding', 'async'); });
 
     /* ---------- Preloader ---------- */
     const pre = $('.preloader'), preNum = $('.pre-num');
@@ -1241,7 +1266,8 @@
       const about = $('#about');
       if (about) smoothTo(about);
     });
-    $('[data-top]').addEventListener('click', () => {
+    const topBtn = $('[data-top]');
+    if (topBtn) topBtn.addEventListener('click', () => {
       smoothTo(0);
     });
 
