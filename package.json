@@ -1,0 +1,8 @@
+{
+  "name": "finaki",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html dist/index.html && cp -r public dist/public"
+  }
+}
