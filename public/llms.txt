@@ -12,4 +12,6 @@
 - Recognition: Awwwards Site of the Day ×3, FWA of the Day ×2, CSSDA Website of the Day ×4
 - Process: 01 Uncover your story → 02 Shape your digital presence → 03 Send it into the world
 - Pricing: Fixed, outcome-scoped proposals — one number covering strategy, design and development
-- FAQ: https://finaki.co.ke/#faq
+- Contact style: Email only — imran@finaki.co.ke, read by Imran, answered within 24 hours. No forms, no gatekeepers.
+- Pages: Home (https://finaki.co.ke/), About (https://finaki.co.ke/about), Portfolio (https://finaki.co.ke/portfolio), Services (https://finaki.co.ke/services), FAQs (https://finaki.co.ke/faq), Contact (https://finaki.co.ke/contact)
+- FAQ: https://finaki.co.ke/faq
