@@ -1,15 +1,4 @@
-# misc
-.DS_Store
-*.pem
-
-# build output
-/dist
-
-# debug
-npm-debug.log*
-
-# vercel
-.vercel
-
-# env files
-.env*.local
+node_modules/
+dist/
+.wrangler/
+.open-next/

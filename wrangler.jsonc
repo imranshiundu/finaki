@@ -1,0 +1,21 @@
+{
+  // finaki.co.ke — served by this Cloudflare Worker (static assets), migrated
+  // off Vercel on 2026-11-17: the Vercel git integration stopped deploying
+  // (the de-clone push sat undeployed; the origin kept serving the old site).
+  // Every other property already runs on this Cloudflare account; finaki now
+  // does too. Deploys run via .github/workflows/deploy.yml on push to main:
+  // npm run build (html + public -> dist) -> wrangler deploy. Requires repo
+  // secrets CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID.
+  //
+  // Routes: finaki.co.ke and www.finaki.co.ke (Custom Domains on this worker).
+  // html_handling auto-trailing-slash keeps the old Vercel cleanUrls behavior
+  // (/founder -> founder.html).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "finaki",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

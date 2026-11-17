@@ -1,0 +1,43 @@
+# Deploys finaki.co.ke to Cloudflare Workers (static assets) on every push to
+# main. Migrated off Vercel on 2026-11-17 after the Vercel git integration
+# stopped deploying — the de-clone push sat undeployed while the origin kept
+# serving the old site. The worker serves dist/ at finaki.co.ke and
+# www.finaki.co.ke (Custom Domains, zone b83546402333b323402eaa53f97f608f).
+#
+# One-time setup (repo Settings -> Secrets and variables -> Actions):
+#   CLOUDFLARE_API_TOKEN  — token with Workers Scripts:Edit
+#   CLOUDFLARE_ACCOUNT_ID — the account id
+
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build (html + public -> dist)
+        run: npm run build
+
+      - name: Deploy worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
