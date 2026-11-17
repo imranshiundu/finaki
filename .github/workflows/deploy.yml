@@ -35,9 +35,12 @@ jobs:
       - name: Build (html + public -> dist)
         run: npm run build
 
+      # Direct npx with -y and a pinned version: the wrangler-action fallback
+      # installs an old wrangler that cannot read wrangler.jsonc ("Missing
+      # entry-point") — the same bug taptap-frontend hit and fixed in c6c7f59.
+      # 4.148.0 is the exact version that deployed this worker locally.
       - name: Deploy worker
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+        run: npx -y wrangler@4.148.0 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
