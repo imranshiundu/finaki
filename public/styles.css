@@ -642,3 +642,9 @@
     [data-reveal],.lm-in,.hl,.sw-in,.g-in,.ml-txt,.m-idx{opacity:1!important;transform:none!important}
     html{scroll-behavior:auto}
   }
+
+  /* properties grid — the real portfolio, replacing the borrowed client list */
+  .props{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .prop{background:var(--bg);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px;transition:background .3s}
+  .prop:hover{background:rgba(234,230,220,.06)}
+  .p-role{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}

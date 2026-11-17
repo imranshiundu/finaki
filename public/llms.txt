@@ -1,17 +1,18 @@
 # FINAKI
 
-> FINAKI is an independent design studio founded by Imran Shiundu (Nairobi, 2022). We build change-making websites and brand experiences for founder-led brands whose presence hasn't caught up to what they've built. Nairobi / Melbourne — working worldwide.
+> FINAKI is an independent design studio founded by Imran Shiundu — one person, no handoffs: strategy, identity, web design and code from the same hands. Based in Nairobi, working worldwide.
 
-- Contact: imran@finaki.co.ke
 - Founder: Imran Shiundu — founder page: https://finaki.co.ke/founder
-- Founded: 2022
-- Locations: Nairobi (Kenya), Melbourne (Australia) — serving clients worldwide
+- Contact: imran@taptap.africa — email only, read by Imran, answered within 24 hours
+- The founder file (every venture, one page): https://www.imranisdev.top/founder
 - Services: Brand Strategy, Visual Identity, Website Strategy, Website Design, Webflow Development, 3D Development
-- Clients: Vinamilk, Mộc Châu, The University of Sydney, OH Architecture, Supersolid, Mammoth Murals, HISS, Backhouse
-- Results: $2M+ in new projects for OH Architecture within 3 months of launch; 58% average session duration increase for Supersolid; $100K+ in new work for Mammoth Murals within 30 days of launch; 15+ universities united on a single platform for HISS
-- Recognition: Awwwards Site of the Day ×3, FWA of the Day ×2, CSSDA Website of the Day ×4
+- The studio's own site is the sample: strategy, identity, copy and code, built in-house end to end
+- The properties the studio's founder also runs (design and engineering in-house, every one live at its own domain):
+  - TapTap Africa — cashless payments for live events (product of Olarfe Africa; built and operated by the TapTap team) — https://taptap.africa — founder
+  - Inside Nairobi Tours — private Nairobi tours & JKIA layover safaris (under Inkind Experiences) — https://insidenairobitours.com — co-founder · tour coordinator
+  - Explore Kibera Tours — community-led Kibera walking tours (under Inkind Experiences) — https://www.explorekibera.com — co-founder · tour coordinator
+  - Rush Burgers — online ordering platform (product of Alibunbun Grupp OÜ) — https://rushburgers.co.ke — developer & technical lead
 - Process: 01 Uncover your story → 02 Shape your digital presence → 03 Send it into the world
-- Pricing: Fixed, outcome-scoped proposals — one number covering strategy, design and development
-- Contact style: Email only — imran@finaki.co.ke, read by Imran, answered within 24 hours. No forms, no gatekeepers.
+- Pricing: fixed, outcome-scoped proposals — one number covering strategy, design and development
 - Pages: Home (https://finaki.co.ke/), About (https://finaki.co.ke/about), Founder (https://finaki.co.ke/founder), Portfolio (https://finaki.co.ke/portfolio), Services (https://finaki.co.ke/services), FAQs (https://finaki.co.ke/faq), Contact (https://finaki.co.ke/contact)
 - FAQ: https://finaki.co.ke/faq

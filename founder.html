@@ -43,7 +43,7 @@
         "familyName": "Shiundu",
         "jobTitle": "Founder",
         "worksFor": { "@id": "https://finaki.co.ke/#organization" },
-        "email": "mailto:imran@finaki.co.ke",
+        "email": "mailto:imran@taptap.africa",
         "nationality": "Kenyan",
         "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
         "description": "Software engineer and designer. Founder of FINAKI, founder and lead engineer of TapTap Africa, and a full-stack programming tutor at kood/Nairobi.",
@@ -75,11 +75,10 @@
     /* founder-page only: inline text links inside display copy */
     .display-copy .copy-link{ color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,.4); text-underline-offset:4px; transition:text-decoration-color .2s ease; }
     .display-copy .copy-link:hover{ text-decoration-color:#fff; }
-    /* founder-page only: proof metrics as a bordered cell grid (value-cell style) */
-    .proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-    .proof-grid .metric{background:var(--bg);padding:clamp(28px,3.4vw,44px)}
-    .proof-grid .metric strong{font-size:clamp(44px,4.5vw,72px)}
-    .proof-grid .metric p{margin-top:12px}
+    /* founder-page only: the work list */
+    .work-list{list-style:none;margin-top:20px;display:grid;gap:14px}
+    .work-list li{font-size:15px;line-height:1.7;padding-left:18px;position:relative}
+    .work-list li:before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;background:var(--accent)}
   </style>
   <noscript><style>
     [data-reveal],.lm-in,.hl,.sw-in,.g-in,.hero-kicker,.hero-foot,.hero-badge{opacity:1!important;transform:none!important}
@@ -127,7 +126,7 @@
     <!-- ================= FOUNDER HERO ================= -->
     <section class="page-hero panel">
       <nav class="crumb mono" aria-label="Breadcrumb"><a href="/">FINAKI</a><span>→</span><span>Founder</span></nav>
-      <p class="page-kicker mono"><span class="dot" aria-hidden="true"></span> The founder — Nairobi / Melbourne</p>
+      <p class="page-kicker mono"><span class="dot" aria-hidden="true"></span> The founder — Nairobi, working worldwide</p>
       <h1 class="page-title" data-reveal="lines">
         <span class="lm"><span class="lm-in">Built by the person</span></span>
         <span class="lm"><span class="lm-in"><em>who does the work.</em></span></span>
@@ -169,18 +168,23 @@
       </div>
     </section>
 
-    <!-- ================= THE PROOF ================= -->
+    <!-- ================= THE WORK ================= -->
     <section class="panel">
       <div class="sec-head" data-reveal="fade">
-        <span class="sec-idx">03</span><h2 class="sec-label">The proof</h2><span class="sec-meta">( What that thesis shipped )</span>
+        <span class="sec-idx">03</span><h2 class="sec-label">The work</h2><span class="sec-meta">( What that thesis shipped )</span>
       </div>
-      <div class="proof-grid" data-reveal="fade">
-        <div class="metric"><strong>$2M<b>+</b></strong><p>In new projects for OH Architecture after their new site went live.</p></div>
-        <div class="metric"><strong>58<b>%</b></strong><p>Average session duration increase for Supersolid.</p></div>
-        <div class="metric"><strong>$100K<b>+</b></strong><p>In new work for Mammoth Murals after launch.</p></div>
-        <div class="metric"><strong>15<b>+</b></strong><p>Universities united on a single platform for HISS.</p></div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="display-copy" data-reveal="fade">The studio's own presence is the sample — this site was designed and engineered in-house, end to end. The same hands built the properties below, and every one is live at its own domain:</p>
+          <ul class="work-list" data-reveal="fade">
+            <li><strong>TapTap Africa</strong> — cashless payments for live events, a product of Olarfe Africa. <a class="copy-link" href="https://taptap.africa/founder">Founder</a></li>
+            <li><strong>Inside Nairobi Tours</strong> — private tours &amp; JKIA layover safaris, under Inkind Experiences. <a class="copy-link" href="https://www.insidenairobitours.com/founder">Co-founder · coordinator</a></li>
+            <li><strong>Explore Kibera Tours</strong> — community-led Kibera walking tours, under Inkind Experiences. <a class="copy-link" href="https://explore-kibera.imranshiundu.workers.dev/founder">Co-founder · coordinator</a></li>
+            <li><strong>Rush Burgers</strong> — the online ordering platform, a product of Alibunbun Grupp OÜ. <a class="copy-link" href="https://rushburgers.co.ke/founder">Developer · technical lead</a></li>
+          </ul>
+          <p class="display-copy" data-reveal="fade">Each link opens the founder note on that property's own domain — the claim verifies at the source, not here.</p>
+        </div>
       </div>
-      <p class="display-copy" data-reveal="fade" style="margin-top:24px;">Recognition along the way: Awwwards Site of the Day ×3, FWA of the Day ×2, CSSDA Website of the Day ×4 — with work for Vinamilk, Mộc Châu, The University of Sydney, OH Architecture, Supersolid, Mammoth Murals, HISS and Backhouse.</p>
     </section>
 
     <!-- ================= BEYOND THE STUDIO ================= -->
@@ -190,7 +194,7 @@
       </div>
       <div class="about-grid">
         <div class="about-copy">
-          <p class="display-copy" data-reveal="fade">FINAKI isn't the only thing I've founded — and that's the point. I'm also the founder and lead engineer of <a class="copy-link" href="https://taptap.africa/founder">TapTap Africa</a>, a Nairobi cashless payments platform, and I teach full-stack programming at kood/Nairobi, the Nairobi campus of an Estonian programming school. My full work lives at <a class="copy-link" href="https://www.imranisdev.top">www.imranisdev.top</a>.</p>
+          <p class="display-copy" data-reveal="fade">FINAKI isn't the only thing I've founded — and that's the point. I'm also the founder of <a class="copy-link" href="https://taptap.africa/founder">TapTap Africa</a>, a Nairobi cashless payments platform (the platform is built and operated by the TapTap team inside Olarfe Africa), and I teach full-stack programming at kood/Nairobi, the Nairobi campus of an Estonian programming school. My full work lives at <a class="copy-link" href="https://www.imranisdev.top">www.imranisdev.top</a>.</p>
           <p class="display-copy" data-reveal="fade">That engineering spine is why FINAKI sites behave the way they do. Design that only has to survive a portfolio shot is easy. Design that has to survive real users, real traffic and real money is a different discipline — and it's the one I practice daily.</p>
         </div>
       </div>
@@ -204,20 +208,20 @@
           <span class="lm"><span class="lm-in">WHO BUILDS IT —</span></span>
           <span class="lm"><span class="lm-in accent">TELL ME YOURS →</span></span>
         </h2>
-        <a class="cta-large" href="mailto:imran@finaki.co.ke" data-magnetic>
-          <span class="roll"><span class="roll-a">imran@finaki.co.ke</span><span class="roll-b" aria-hidden="true">imran@finaki.co.ke</span></span>
+        <a class="cta-large" href="mailto:imran@taptap.africa" data-magnetic>
+          <span class="roll"><span class="roll-a">imran@taptap.africa</span><span class="roll-b" aria-hidden="true">imran@taptap.africa</span></span>
           <span class="v-arr"><svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" stroke="currentColor" stroke-width="1.5"/></svg></span>
         </a>
-        <p class="cta-meta mono">Email only — read by Imran, answered within 24 hours. Nairobi / Melbourne — working worldwide</p>
+        <p class="cta-meta mono">Email only — read by Imran, answered within 24 hours. Nairobi — working worldwide</p>
       </div>
     </section>
   </main>
 
   <footer class="panel footer">
     <div class="awards" data-reveal="fade">
-      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">Awwwards — Site of the Day ×3</span></span>
-      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">FWA — of the Day ×2</span></span>
-      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">CSSDA — Website of the Day ×4</span></span>
+      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">Fixed-price proposals — quote approved before any code</span></span>
+      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">First version in 30–60 days</span></span>
+      <span class="award"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0l1.8 5.2L14 7l-5.2 1.8L7 14 5.2 8.8 0 7l5.2-1.8z" fill="currentColor"/></svg><span class="mono">30 days of post-launch support · replies within 24 hours</span></span>
     </div>
 
     <div class="footer-main">
@@ -233,11 +237,11 @@
         <a href="#" data-toast="YouTube — channel launching soon">YouTube ↗</a>
         <a href="#" data-toast="LinkedIn — page launching soon">LinkedIn ↗</a>
         <a href="#" data-toast="Instagram — profile launching soon">Instagram ↗</a>
-        <span class="partner-pill">Certified Webflow Partner</span>
+        <span class="partner-pill">One person, no handoffs</span>
       </div>
       <div class="f-meta" data-reveal data-delay="2">
-        <a class="mail" href="mailto:imran@finaki.co.ke">↳ imran@finaki.co.ke</a>
-        <p>Based in Nairobi, Kenya<br />and Melbourne, Australia.<br />Working Worldwide.</p>
+        <a class="mail" href="mailto:imran@taptap.africa">↳ imran@taptap.africa</a>
+        <p>Based in Nairobi, Kenya.<br />Working worldwide.</p>
       </div>
     </div>
 
@@ -270,9 +274,9 @@
       <a href="/contact" data-menu-close><span class="m-idx">06</span><span class="ml-txt">Contact</span></a>
     </nav>
     <div class="menu-foot">
-      <div class="menu-card"><img src="https://picsum.photos/seed/finaki-menu/700/900.jpg" alt="FINAKI studio snapshot" loading="lazy" /></div>
+      <div class="menu-card"><img src="/imran.png" alt="Imran Shiundu — founder, FINAKI" loading="lazy" /></div>
       <div class="menu-copy mono" aria-hidden="true"><span>listen</span><span>create</span><span>obsess</span><span>inspire</span></div>
-      <a class="menu-mail mono" href="mailto:imran@finaki.co.ke">imran@finaki.co.ke</a>
+      <a class="menu-mail mono" href="mailto:imran@taptap.africa">imran@taptap.africa</a>
     </div>
   </aside>
 
